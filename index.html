@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>analiza rynkuTNB – dokumentacja aplikacji</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body { font-family: system-ui, sans-serif; line-height: 1.6; max-width: 760px; margin: 2rem auto; padding: 0 1rem; }
+    h1 { font-size: 1.6rem; }
+    h2 { font-size: 1.15rem; margin-top: 1.8rem; }
+    code { background: rgba(127,127,127,.15); padding: .1rem .3rem; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>analiza rynkuTNB</h1>
+    <p>Wewnętrzne narzędzie do analizy rynku. Porównuje ceny zakupu u dostawców z cenami sprzedaży na platformie Allegro i wylicza marże po odjęciu prowizji.</p>
+
+    <h2>Do czego służy</h2>
+    <ul>
+      <li>Przeliczanie cen zakupu netto z EUR na PLN według kursu NBP.</li>
+      <li>Pobieranie najniższych cen ofert z Allegro przez oficjalne REST API.</li>
+      <li>Wyliczanie prowizji, zysku i marży dla każdego produktu z cennika.</li>
+    </ul>
+
+    <h2>Z jakich danych korzysta</h2>
+    <ul>
+      <li>Publiczne oferty w Allegro (wyszukiwanie po EAN lub nazwie). Aplikacja nie zmienia ofert i nie wykonuje zamówień.</li>
+      <li>Kurs średni NBP (tabela A).</li>
+      <li>Cenniki dostawców przekazywane przez użytkownika.</li>
+    </ul>
+
+    <h2>Zakres uprawnień</h2>
+    <p>Aplikacja używa wyłącznie odczytu publicznych danych. Nie wymaga dostępu do danych osobowych ani do zamówień na koncie.</p>
+
+    <h2>Dane osobowe</h2>
+    <p>Aplikacja nie zbiera ani nie przechowuje danych osobowych.</p>
+  </main>
+</body>
+</html>
